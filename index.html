@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" href="style.css">
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
@@ -18,16 +20,19 @@
 
 <header class="app-header">
 <h1>SIINas</h1>
-<p>Laporan Triwulan</p>
+<p>Laporan Triwulan Industri</p>
 </header>
 
 <form id="formLaporan">
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">calendar_month</span>
 <h3>Periode Laporan</h3>
+</div>
 
-<select id="periode">
+<select id="periode" required>
 <option value="">Pilih Periode</option>
 <option>Triwulan I</option>
 <option>Triwulan II</option>
@@ -40,7 +45,10 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">account_balance</span>
 <h3>Investasi</h3>
+</div>
 
 <input type="number" id="nilaiMesin" placeholder="Nilai Mesin">
 
@@ -53,17 +61,18 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">handshake</span>
 <h3>Maklon</h3>
+</div>
 
 <label>Menggunakan Maklon</label>
-
 <select id="maklonPakai">
 <option>Ya</option>
 <option>Tidak</option>
 </select>
 
 <label>Menyediakan Maklon</label>
-
 <select id="maklonSedia">
 <option>Ya</option>
 <option>Tidak</option>
@@ -74,7 +83,10 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">person</span>
 <h3>Pemilik</h3>
+</div>
 
 <input type="text" id="namaPemilik" placeholder="Nama Pemilik">
 
@@ -97,7 +109,10 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">factory</span>
 <h3>Produksi</h3>
+</div>
 
 <input type="text" id="produk" placeholder="Produk">
 
@@ -108,9 +123,9 @@
 <option>Pack</option>
 </select>
 
-<input type="number" id="kapasitasUnit" placeholder="Kapasitas Unit">
+<input type="number" id="kapasitasUnit" placeholder="Kapasitas Produksi (Unit)">
 
-<input type="number" id="kapasitasKilo" placeholder="Kapasitas Kilo">
+<input type="number" id="kapasitasKilo" placeholder="Kapasitas Produksi (Kilo)">
 
 <input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan">
 
@@ -119,7 +134,10 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">inventory</span>
 <h3>Bahan Baku</h3>
+</div>
 
 <input type="text" id="namaBahanBaku" placeholder="Nama Bahan Baku">
 
@@ -140,7 +158,10 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">domain</span>
 <h3>Aset</h3>
+</div>
 
 <input type="number" id="nilaiTanah" placeholder="Nilai Tanah">
 
@@ -151,18 +172,24 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">groups</span>
 <h3>Tenaga Kerja</h3>
+</div>
 
-<input type="number" id="tenagaKerjaLaki" placeholder="Laki-laki">
+<input type="number" id="tenagaKerjaLaki" placeholder="Tenaga Kerja Laki-laki">
 
-<input type="number" id="tenagaKerjaPerempuan" placeholder="Perempuan">
+<input type="number" id="tenagaKerjaPerempuan" placeholder="Tenaga Kerja Perempuan">
 
 </div>
 
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">bolt</span>
 <h3>Utilitas</h3>
+</div>
 
 <select id="air">
 <option>Air Tanah</option>
@@ -192,7 +219,10 @@
 
 <div class="card">
 
+<div class="card-title">
+<span class="material-icons">photo_camera</span>
 <h3>Upload Foto</h3>
+</div>
 
 <input type="file" id="foto">
 
