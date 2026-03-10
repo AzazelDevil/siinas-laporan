@@ -1,56 +1,78 @@
 const url="https://script.google.com/macros/s/AKfycbzpqH1cGyyJmCbMMr0kZ0eZDwhtFgrjCd1YxeyOWlV22H_6sGkX302weEMgOKheOi5XBg/exec";
 
+function showToast(message){
+
+const toast=document.getElementById("toast");
+const text=document.getElementById("toastText");
+
+text.innerText=message;
+
+toast.classList.add("show");
+
+setTimeout(()=>{
+toast.classList.remove("show");
+},3000);
+
+}
+
+function validateForm(){
+
+const inputs=document.querySelectorAll("#formLaporan input, #formLaporan select");
+
+for(let i=0;i<inputs.length;i++){
+
+if(inputs[i].value.trim()===""){
+
+showToast("Harap isi semua data terlebih dahulu");
+
+inputs[i].focus();
+
+return false;
+
+}
+
+}
+
+return true;
+
+}
+
 document
 .getElementById("formLaporan")
-.addEventListener("submit",async function(e){
+.addEventListener("submit",function(e){
 
 e.preventDefault();
 
+if(!validateForm()){
+return;
+}
+
 const file=document.getElementById("foto").files[0];
-
-let base64="";
-let mime="";
-let fileName="";
-
-if(file){
 
 const reader=new FileReader();
 
-reader.onload=async function(){
+reader.onload=function(){
 
-base64=reader.result.split(",")[1];
-mime=file.type;
-fileName=file.name;
-
-sendData();
-
-}
-
-reader.readAsDataURL(file);
-
-}else{
-
-sendData();
-
-}
-
-function sendData(){
+const base64=reader.result.split(",")[1];
 
 const data={
 
 nib:nib.value,
+namaPemilik:namaPemilik.value,
+jenisKelamin:jenisKelamin.value,
+pendidikan:pendidikan.value,
+
 periode:periode.value,
 
 nilaiMesin:nilaiMesin.value,
 nilaiLainnya:nilaiLainnya.value,
 modalKerja:modalKerja.value,
 
+nilaiTanah:nilaiTanah.value,
+nilaiBangunan:nilaiBangunan.value,
+
 maklonPakai:maklonPakai.value,
 maklonSedia:maklonSedia.value,
-
-namaPemilik:namaPemilik.value,
-jenisKelamin:jenisKelamin.value,
-pendidikan:pendidikan.value,
 
 produk:produk.value,
 satuan:satuan.value,
@@ -65,9 +87,6 @@ jumlahBahanBaku:jumlahBahanBaku.value,
 satuanBahanBaku:satuanBahanBaku.value,
 nilaiBahanBaku:nilaiBahanBaku.value,
 
-nilaiTanah:nilaiTanah.value,
-nilaiBangunan:nilaiBangunan.value,
-
 tenagaKerjaLaki:tenagaKerjaLaki.value,
 tenagaKerjaPerempuan:tenagaKerjaPerempuan.value,
 
@@ -78,8 +97,8 @@ biayaListrik:biayaListrik.value,
 tipeKwh:tipeKwh.value,
 
 foto:base64,
-mimeType:mime,
-fileName:fileName
+fileName:file.name,
+mimeType:file.type
 
 };
 
@@ -88,15 +107,23 @@ method:"POST",
 body:JSON.stringify(data)
 })
 
-.then(r=>r.json())
+.then(res=>res.json())
 .then(res=>{
 
-alert("Laporan berhasil dikirim");
+showToast("Laporan berhasil dikirim");
 
 document.getElementById("formLaporan").reset();
 
+})
+.catch(()=>{
+
+showToast("Gagal mengirim laporan");
+
 });
 
-}
+};
+
+reader.readAsDataURL(file);
 
 });
+```
