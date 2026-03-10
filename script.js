@@ -126,4 +126,3 @@ showToast("Gagal mengirim laporan");
 reader.readAsDataURL(file);
 
 });
-```
