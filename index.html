@@ -4,26 +4,41 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Laporan Triwulan SIINas</title>
+
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
 
-<h1>Laporan Triwulan SIINas</h1>
+<header class="app-header">
+<h1>SIINas</h1>
+<p>Laporan Triwulan</p>
+</header>
 
 <form id="formLaporan">
 
-<select id="periode" required>
-<option value="">Periode Dilaporkan</option>
+<div class="card">
+
+<h3>Periode Laporan</h3>
+
+<select id="periode">
+<option value="">Pilih Periode</option>
 <option>Triwulan I</option>
 <option>Triwulan II</option>
 <option>Triwulan III</option>
 <option>Triwulan IV</option>
 </select>
+
+</div>
+
+
+<div class="card">
 
 <h3>Investasi</h3>
 
@@ -33,19 +48,31 @@
 
 <input type="number" id="modalKerja" placeholder="Modal Kerja">
 
+</div>
+
+
+<div class="card">
+
 <h3>Maklon</h3>
 
+<label>Menggunakan Maklon</label>
+
 <select id="maklonPakai">
-<option value="">Menggunakan Maklon?</option>
 <option>Ya</option>
 <option>Tidak</option>
 </select>
 
+<label>Menyediakan Maklon</label>
+
 <select id="maklonSedia">
-<option value="">Menyediakan Maklon?</option>
 <option>Ya</option>
 <option>Tidak</option>
 </select>
+
+</div>
+
+
+<div class="card">
 
 <h3>Pemilik</h3>
 
@@ -65,6 +92,11 @@
 <option>S2</option>
 </select>
 
+</div>
+
+
+<div class="card">
+
 <h3>Produksi</h3>
 
 <input type="text" id="produk" placeholder="Produk">
@@ -82,6 +114,11 @@
 
 <input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan">
 
+</div>
+
+
+<div class="card">
+
 <h3>Bahan Baku</h3>
 
 <input type="text" id="namaBahanBaku" placeholder="Nama Bahan Baku">
@@ -98,17 +135,32 @@
 
 <input type="number" id="nilaiBahanBaku" placeholder="Nilai Bahan Baku">
 
+</div>
+
+
+<div class="card">
+
 <h3>Aset</h3>
 
 <input type="number" id="nilaiTanah" placeholder="Nilai Tanah">
 
 <input type="number" id="nilaiBangunan" placeholder="Nilai Bangunan">
 
+</div>
+
+
+<div class="card">
+
 <h3>Tenaga Kerja</h3>
 
 <input type="number" id="tenagaKerjaLaki" placeholder="Laki-laki">
 
 <input type="number" id="tenagaKerjaPerempuan" placeholder="Perempuan">
+
+</div>
+
+
+<div class="card">
 
 <h3>Utilitas</h3>
 
@@ -135,11 +187,19 @@
 <option>3500</option>
 </select>
 
+</div>
+
+
+<div class="card">
+
 <h3>Upload Foto</h3>
 
 <input type="file" id="foto">
 
-<button type="submit">Kirim Laporan</button>
+</div>
+
+
+<button class="submit-btn">Kirim Laporan</button>
 
 </form>
 
