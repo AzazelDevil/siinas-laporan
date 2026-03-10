@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +10,6 @@
 <title>Laporan Triwulan SIINas</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -27,25 +27,23 @@ Laporan Triwulan SIINas
 
 <div class="grid-form">
 
-<!-- IDENTITAS -->
-
 <div class="card">
-
 <div class="card-title">
 <span class="material-icons">badge</span>
 <h3>Identitas</h3>
 </div>
 
-<input type="text" id="nib" placeholder="Nomor NIB">
+<input type="text" id="nib" placeholder="Nomor NIB" required>
+<input type="text" id="namaPemilik" placeholder="Nama Pemilik" required>
 
-<input type="text" id="namaPemilik" placeholder="Nama Pemilik">
-
-<select id="jenisKelamin">
+<select id="jenisKelamin" required>
+<option value="">Jenis Kelamin</option>
 <option>Laki-laki</option>
 <option>Perempuan</option>
 </select>
 
-<select id="pendidikan">
+<select id="pendidikan" required>
+<option value="">Tingkat Pendidikan</option>
 <option>SD</option>
 <option>SMP</option>
 <option>SMA</option>
@@ -53,83 +51,67 @@ Laporan Triwulan SIINas
 <option>S1</option>
 <option>S2</option>
 </select>
-
 </div>
 
-<!-- PERIODE -->
-
 <div class="card">
-
 <div class="card-title">
 <span class="material-icons">date_range</span>
 <h3>Periode</h3>
 </div>
 
-<select id="periode">
+<select id="periode" required>
+<option value="">Pilih Periode</option>
 <option>Triwulan I</option>
 <option>Triwulan II</option>
 <option>Triwulan III</option>
 <option>Triwulan IV</option>
 </select>
-
 </div>
 
-<!-- INVESTASI -->
-
 <div class="card">
-
 <div class="card-title">
 <span class="material-icons">payments</span>
 <h3>Investasi</h3>
 </div>
 
-<input type="number" id="nilaiMesin" placeholder="Nilai Mesin">
-
-<input type="number" id="nilaiLainnya" placeholder="Nilai Lainnya">
-
-<input type="number" id="modalKerja" placeholder="Modal Kerja">
-
-<input type="number" id="nilaiTanah" placeholder="Nilai Tanah">
-
-<input type="number" id="nilaiBangunan" placeholder="Nilai Bangunan">
-
+<input type="number" id="nilaiMesin" placeholder="Nilai Mesin" required>
+<input type="number" id="nilaiLainnya" placeholder="Nilai Lainnya" required>
+<input type="number" id="modalKerja" placeholder="Modal Kerja" required>
+<input type="number" id="nilaiTanah" placeholder="Nilai Tanah" required>
+<input type="number" id="nilaiBangunan" placeholder="Nilai Bangunan" required>
 </div>
 
-<!-- MAKLON -->
-
 <div class="card">
-
 <div class="card-title">
 <span class="material-icons">precision_manufacturing</span>
 <h3>Maklon</h3>
 </div>
 
-<label>Menggunakan Jasa Maklon</label>
-<select id="maklonPakai">
+<label>Menggunakan Maklon</label>
+<select id="maklonPakai" required>
+<option value="">Pilih</option>
 <option>Ya</option>
 <option>Tidak</option>
 </select>
 
-<label>Menyediakan Jasa Maklon</label>
-<select id="maklonSedia">
+<label>Menyediakan Maklon</label>
+<select id="maklonSedia" required>
+<option value="">Pilih</option>
 <option>Ya</option>
 <option>Tidak</option>
 </select>
-
 </div>
 
-<!-- PRODUKSI -->
-
 <div class="card full">
-
 <div class="card-title">
 <span class="material-icons">factory</span>
 <h3>Produksi</h3>
 </div>
 
-<input type="text" id="produk" placeholder="Produk">
+<input type="text" id="produk" placeholder="Produk" required>
 
-<select id="satuan">
+<select id="satuan" required>
+<option value="">Satuan</option>
 <option>Pcs</option>
 <option>Lembar</option>
 <option>Buah</option>
@@ -137,28 +119,22 @@ Laporan Triwulan SIINas
 <option>Kilo</option>
 </select>
 
-<input type="number" id="kapasitasUnit" placeholder="Kapasitas Produksi Unit">
-
-<input type="number" id="kapasitasKilo" placeholder="Kapasitas Produksi Kilo">
-
-<input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan">
-
+<input type="number" id="kapasitasUnit" placeholder="Kapasitas Unit" required>
+<input type="number" id="kapasitasKilo" placeholder="Kapasitas Kilo" required>
+<input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan" required>
 </div>
 
-<!-- BAHAN BAKU -->
-
 <div class="card full">
-
 <div class="card-title">
 <span class="material-icons">inventory</span>
 <h3>Bahan Baku</h3>
 </div>
 
-<input type="text" id="namaBahanBaku" placeholder="Nama Bahan Baku">
+<input type="text" id="namaBahanBaku" placeholder="Nama Bahan Baku" required>
+<input type="number" id="jumlahBahanBaku" placeholder="Jumlah Bahan Baku" required>
 
-<input type="number" id="jumlahBahanBaku" placeholder="Jumlah Bahan Baku">
-
-<select id="satuanBahanBaku">
+<select id="satuanBahanBaku" required>
+<option value="">Satuan</option>
 <option>lembar</option>
 <option>pcs</option>
 <option>kilo</option>
@@ -166,41 +142,34 @@ Laporan Triwulan SIINas
 <option>bungkus</option>
 </select>
 
-<input type="number" id="nilaiBahanBaku" placeholder="Nilai Bahan Baku">
-
+<input type="number" id="nilaiBahanBaku" placeholder="Nilai Bahan Baku" required>
 </div>
 
-<!-- TENAGA KERJA -->
-
 <div class="card">
-
 <div class="card-title">
 <span class="material-icons">groups</span>
 <h3>Tenaga Kerja</h3>
 </div>
 
-<input type="number" id="tenagaKerjaLaki" placeholder="Laki-laki">
-
-<input type="number" id="tenagaKerjaPerempuan" placeholder="Perempuan">
-
+<input type="number" id="tenagaKerjaLaki" placeholder="Laki-laki" required>
+<input type="number" id="tenagaKerjaPerempuan" placeholder="Perempuan" required>
 </div>
 
-<!-- UTILITAS -->
-
 <div class="card">
-
 <div class="card-title">
 <span class="material-icons">bolt</span>
 <h3>Utilitas</h3>
 </div>
 
-<select id="air">
+<select id="air" required>
+<option value="">Sumber Air</option>
 <option>Air Tanah</option>
 <option>PDAM</option>
 <option>Permukaan</option>
 </select>
 
-<select id="bahanBakar">
+<select id="bahanBakar" required>
+<option value="">Bahan Bakar</option>
 <option>Bensin</option>
 <option>Solar</option>
 <option>Pelumas</option>
@@ -208,28 +177,24 @@ Laporan Triwulan SIINas
 <option>Elpiji</option>
 </select>
 
-<input type="number" id="biayaListrik" placeholder="Biaya Listrik / bulan">
+<input type="number" id="biayaListrik" placeholder="Biaya Listrik" required>
 
-<select id="tipeKwh">
+<select id="tipeKwh" required>
+<option value="">Tipe Kwh</option>
 <option>450</option>
 <option>900</option>
 <option>1300</option>
 <option>2200</option>
 </select>
-
 </div>
 
-<!-- FOTO -->
-
 <div class="card full">
-
 <div class="card-title">
 <span class="material-icons">photo_camera</span>
 <h3>Upload Foto</h3>
 </div>
 
-<input type="file" id="foto">
-
+<input type="file" id="foto" required>
 </div>
 
 </div>
@@ -243,7 +208,13 @@ Kirim Laporan
 
 </div>
 
+<div id="toast" class="toast">
+<span class="material-icons">check_circle</span>
+<span id="toastText">Laporan berhasil dikirim</span>
+</div>
+
 <script src="script.js"></script>
 
 </body>
 </html>
+```
