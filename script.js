@@ -1,4 +1,4 @@
-const url="https://script.google.com/macros/s/AKfycbxZqOIJ8McYEH8O9xMbwvJM1WfOJojKdOXLktWd7C5RwEfk18U0Pt3p0tCB0S_GLvDqLA/exec"
+const url="https://script.google.com/macros/s/AKfycbzpqH1cGyyJmCbMMr0kZ0eZDwhtFgrjCd1YxeyOWlV22H_6sGkX302weEMgOKheOi5XBg/exec"
 
 document
 .getElementById("formLaporan")
