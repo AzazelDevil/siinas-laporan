@@ -18,89 +18,25 @@
 
 <div class="app">
 
-<header class="app-header">
-<h1>SIINas</h1>
-<p>Laporan Triwulan Industri</p>
-</header>
+<h1 class="title">
+<span class="material-icons">assessment</span>
+Laporan Triwulan SIINas
+</h1>
 
 <form id="formLaporan">
+
+<div class="grid-form">
+
+<!-- IDENTITAS -->
 
 <div class="card">
 
 <div class="card-title">
 <span class="material-icons">badge</span>
-<h3>Identitas Perusahaan</h3>
+<h3>Identitas</h3>
 </div>
 
-<input 
-type="text" 
-id="nib" 
-placeholder="Nomor NIB (13 Digit)" 
-maxlength="13"
-required>
-
-</div>
-
-<div class="card-title">
-<span class="material-icons">calendar_month</span>
-<h3>Periode Laporan</h3>
-</div>
-
-<select id="periode" required>
-<option value="">Pilih Periode</option>
-<option>Triwulan I</option>
-<option>Triwulan II</option>
-<option>Triwulan III</option>
-<option>Triwulan IV</option>
-</select>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-title">
-<span class="material-icons">account_balance</span>
-<h3>Investasi</h3>
-</div>
-
-<input type="number" id="nilaiMesin" placeholder="Nilai Mesin">
-
-<input type="number" id="nilaiLainnya" placeholder="Nilai Lainnya">
-
-<input type="number" id="modalKerja" placeholder="Modal Kerja">
-
-</div>
-
-
-<div class="card">
-
-<div class="card-title">
-<span class="material-icons">handshake</span>
-<h3>Maklon</h3>
-</div>
-
-<label>Menggunakan Maklon</label>
-<select id="maklonPakai">
-<option>Ya</option>
-<option>Tidak</option>
-</select>
-
-<label>Menyediakan Maklon</label>
-<select id="maklonSedia">
-<option>Ya</option>
-<option>Tidak</option>
-</select>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-title">
-<span class="material-icons">person</span>
-<h3>Pemilik</h3>
-</div>
+<input type="text" id="nib" placeholder="Nomor NIB">
 
 <input type="text" id="namaPemilik" placeholder="Nama Pemilik">
 
@@ -120,8 +56,71 @@ required>
 
 </div>
 
+<!-- PERIODE -->
 
 <div class="card">
+
+<div class="card-title">
+<span class="material-icons">date_range</span>
+<h3>Periode</h3>
+</div>
+
+<select id="periode">
+<option>Triwulan I</option>
+<option>Triwulan II</option>
+<option>Triwulan III</option>
+<option>Triwulan IV</option>
+</select>
+
+</div>
+
+<!-- INVESTASI -->
+
+<div class="card">
+
+<div class="card-title">
+<span class="material-icons">payments</span>
+<h3>Investasi</h3>
+</div>
+
+<input type="number" id="nilaiMesin" placeholder="Nilai Mesin">
+
+<input type="number" id="nilaiLainnya" placeholder="Nilai Lainnya">
+
+<input type="number" id="modalKerja" placeholder="Modal Kerja">
+
+<input type="number" id="nilaiTanah" placeholder="Nilai Tanah">
+
+<input type="number" id="nilaiBangunan" placeholder="Nilai Bangunan">
+
+</div>
+
+<!-- MAKLON -->
+
+<div class="card">
+
+<div class="card-title">
+<span class="material-icons">precision_manufacturing</span>
+<h3>Maklon</h3>
+</div>
+
+<label>Menggunakan Jasa Maklon</label>
+<select id="maklonPakai">
+<option>Ya</option>
+<option>Tidak</option>
+</select>
+
+<label>Menyediakan Jasa Maklon</label>
+<select id="maklonSedia">
+<option>Ya</option>
+<option>Tidak</option>
+</select>
+
+</div>
+
+<!-- PRODUKSI -->
+
+<div class="card full">
 
 <div class="card-title">
 <span class="material-icons">factory</span>
@@ -131,22 +130,24 @@ required>
 <input type="text" id="produk" placeholder="Produk">
 
 <select id="satuan">
-<option>Lembar</option>
 <option>Pcs</option>
+<option>Lembar</option>
 <option>Buah</option>
 <option>Pack</option>
+<option>Kilo</option>
 </select>
 
-<input type="number" id="kapasitasUnit" placeholder="Kapasitas Produksi (Unit)">
+<input type="number" id="kapasitasUnit" placeholder="Kapasitas Produksi Unit">
 
-<input type="number" id="kapasitasKilo" placeholder="Kapasitas Produksi (Kilo)">
+<input type="number" id="kapasitasKilo" placeholder="Kapasitas Produksi Kilo">
 
-<input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan (dalam rupiah)">
+<input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan">
 
 </div>
 
+<!-- BAHAN BAKU -->
 
-<div class="card">
+<div class="card full">
 
 <div class="card-title">
 <span class="material-icons">inventory</span>
@@ -158,31 +159,18 @@ required>
 <input type="number" id="jumlahBahanBaku" placeholder="Jumlah Bahan Baku">
 
 <select id="satuanBahanBaku">
-<option>Lembar</option>
-<option>Kilo</option>
-<option>Pcs</option>
-<option>Pack</option>
-<option>Bungkus</option>
+<option>lembar</option>
+<option>pcs</option>
+<option>kilo</option>
+<option>pack</option>
+<option>bungkus</option>
 </select>
 
-<input type="number" id="nilaiBahanBaku" placeholder="Nilai Bahan Baku (dalam rupiah)">
+<input type="number" id="nilaiBahanBaku" placeholder="Nilai Bahan Baku">
 
 </div>
 
-
-<div class="card">
-
-<div class="card-title">
-<span class="material-icons">domain</span>
-<h3>Aset</h3>
-</div>
-
-<input type="number" id="nilaiTanah" placeholder="Nilai Tanah (dalam rupiah)">
-
-<input type="number" id="nilaiBangunan" placeholder="Nilai Bangunan (dalam rupiah)">
-
-</div>
-
+<!-- TENAGA KERJA -->
 
 <div class="card">
 
@@ -191,12 +179,13 @@ required>
 <h3>Tenaga Kerja</h3>
 </div>
 
-<input type="number" id="tenagaKerjaLaki" placeholder="Tenaga Kerja Laki-laki">
+<input type="number" id="tenagaKerjaLaki" placeholder="Laki-laki">
 
-<input type="number" id="tenagaKerjaPerempuan" placeholder="Tenaga Kerja Perempuan">
+<input type="number" id="tenagaKerjaPerempuan" placeholder="Perempuan">
 
 </div>
 
+<!-- UTILITAS -->
 
 <div class="card">
 
@@ -219,20 +208,20 @@ required>
 <option>Elpiji</option>
 </select>
 
-<input type="number" id="biayaListrik" placeholder="Biaya Listrik per bulan">
+<input type="number" id="biayaListrik" placeholder="Biaya Listrik / bulan">
 
 <select id="tipeKwh">
 <option>450</option>
 <option>900</option>
 <option>1300</option>
 <option>2200</option>
-<option>3500</option>
 </select>
 
 </div>
 
+<!-- FOTO -->
 
-<div class="card">
+<div class="card full">
 
 <div class="card-title">
 <span class="material-icons">photo_camera</span>
@@ -243,12 +232,14 @@ required>
 
 </div>
 
+</div>
 
-<button class="submit-btn">Kirim Laporan</button>
+<button class="submit-btn">
+<span class="material-icons">send</span>
+Kirim Laporan
+</button>
 
 </form>
-
-<div id="status"></div>
 
 </div>
 
