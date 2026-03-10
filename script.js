@@ -31,6 +31,8 @@ resolve()
 
 const data={
 
+nib:nib.value,
+
 periode:periode.value,
 nilaiMesin:nilaiMesin.value,
 nilaiLainnya:nilaiLainnya.value,
