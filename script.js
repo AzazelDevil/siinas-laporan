@@ -1,77 +1,102 @@
-const url="https://script.google.com/macros/s/AKfycbzpqH1cGyyJmCbMMr0kZ0eZDwhtFgrjCd1YxeyOWlV22H_6sGkX302weEMgOKheOi5XBg/exec"
+const url="https://script.google.com/macros/s/AKfycbzpqH1cGyyJmCbMMr0kZ0eZDwhtFgrjCd1YxeyOWlV22H_6sGkX302weEMgOKheOi5XBg/exec";
 
 document
 .getElementById("formLaporan")
 .addEventListener("submit",async function(e){
 
-e.preventDefault()
+e.preventDefault();
 
-const file=document.getElementById("foto").files[0]
+const file=document.getElementById("foto").files[0];
 
-let base64=""
-let mime=""
-let fileName=""
+let base64="";
+let mime="";
+let fileName="";
 
 if(file){
 
-const reader=new FileReader()
+const reader=new FileReader();
 
-reader.readAsDataURL(file)
+reader.onload=async function(){
 
-await new Promise(resolve=>{
-reader.onload=()=>{
-base64=reader.result.split(",")[1]
-mime=file.type
-fileName=file.name
-resolve()
-}
-})
+base64=reader.result.split(",")[1];
+mime=file.type;
+fileName=file.name;
+
+sendData();
 
 }
+
+reader.readAsDataURL(file);
+
+}else{
+
+sendData();
+
+}
+
+function sendData(){
 
 const data={
 
 nib:nib.value,
-
 periode:periode.value,
+
 nilaiMesin:nilaiMesin.value,
 nilaiLainnya:nilaiLainnya.value,
 modalKerja:modalKerja.value,
+
 maklonPakai:maklonPakai.value,
 maklonSedia:maklonSedia.value,
+
 namaPemilik:namaPemilik.value,
 jenisKelamin:jenisKelamin.value,
 pendidikan:pendidikan.value,
+
 produk:produk.value,
 satuan:satuan.value,
+
 kapasitasUnit:kapasitasUnit.value,
 kapasitasKilo:kapasitasKilo.value,
+
 nilaiProduk:nilaiProduk.value,
+
 namaBahanBaku:namaBahanBaku.value,
 jumlahBahanBaku:jumlahBahanBaku.value,
 satuanBahanBaku:satuanBahanBaku.value,
 nilaiBahanBaku:nilaiBahanBaku.value,
+
 nilaiTanah:nilaiTanah.value,
 nilaiBangunan:nilaiBangunan.value,
+
 tenagaKerjaLaki:tenagaKerjaLaki.value,
 tenagaKerjaPerempuan:tenagaKerjaPerempuan.value,
+
 air:air.value,
 bahanBakar:bahanBakar.value,
+
 biayaListrik:biayaListrik.value,
 tipeKwh:tipeKwh.value,
+
 foto:base64,
 mimeType:mime,
 fileName:fileName
 
-}
+};
 
-await fetch(url,{
+fetch(url,{
 method:"POST",
 body:JSON.stringify(data)
 })
 
-document.getElementById("status").innerText="Laporan berhasil dikirim"
+.then(r=>r.json())
+.then(res=>{
 
-document.getElementById("formLaporan").reset()
+alert("Laporan berhasil dikirim");
 
-})
+document.getElementById("formLaporan").reset();
+
+});
+
+}
+
+});
