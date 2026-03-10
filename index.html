@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Laporan Triwulan SIINas</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Laporan Triwulan SIINas</h1>
+
+<form id="formLaporan">
+
+<select id="periode" required>
+<option value="">Periode Dilaporkan</option>
+<option>Triwulan I</option>
+<option>Triwulan II</option>
+<option>Triwulan III</option>
+<option>Triwulan IV</option>
+</select>
+
+<h3>Investasi</h3>
+
+<input type="number" id="nilaiMesin" placeholder="Nilai Mesin">
+
+<input type="number" id="nilaiLainnya" placeholder="Nilai Lainnya">
+
+<input type="number" id="modalKerja" placeholder="Modal Kerja">
+
+<h3>Maklon</h3>
+
+<select id="maklonPakai">
+<option value="">Menggunakan Maklon?</option>
+<option>Ya</option>
+<option>Tidak</option>
+</select>
+
+<select id="maklonSedia">
+<option value="">Menyediakan Maklon?</option>
+<option>Ya</option>
+<option>Tidak</option>
+</select>
+
+<h3>Pemilik</h3>
+
+<input type="text" id="namaPemilik" placeholder="Nama Pemilik">
+
+<select id="jenisKelamin">
+<option>Laki-laki</option>
+<option>Perempuan</option>
+</select>
+
+<select id="pendidikan">
+<option>SD</option>
+<option>SMP</option>
+<option>SMA</option>
+<option>D3</option>
+<option>S1</option>
+<option>S2</option>
+</select>
+
+<h3>Produksi</h3>
+
+<input type="text" id="produk" placeholder="Produk">
+
+<select id="satuan">
+<option>Lembar</option>
+<option>Pcs</option>
+<option>Buah</option>
+<option>Pack</option>
+</select>
+
+<input type="number" id="kapasitasUnit" placeholder="Kapasitas Unit">
+
+<input type="number" id="kapasitasKilo" placeholder="Kapasitas Kilo">
+
+<input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan">
+
+<h3>Bahan Baku</h3>
+
+<input type="text" id="namaBahanBaku" placeholder="Nama Bahan Baku">
+
+<input type="number" id="jumlahBahanBaku" placeholder="Jumlah Bahan Baku">
+
+<select id="satuanBahanBaku">
+<option>Lembar</option>
+<option>Kilo</option>
+<option>Pcs</option>
+<option>Pack</option>
+<option>Bungkus</option>
+</select>
+
+<input type="number" id="nilaiBahanBaku" placeholder="Nilai Bahan Baku">
+
+<h3>Aset</h3>
+
+<input type="number" id="nilaiTanah" placeholder="Nilai Tanah">
+
+<input type="number" id="nilaiBangunan" placeholder="Nilai Bangunan">
+
+<h3>Tenaga Kerja</h3>
+
+<input type="number" id="tenagaKerjaLaki" placeholder="Laki-laki">
+
+<input type="number" id="tenagaKerjaPerempuan" placeholder="Perempuan">
+
+<h3>Utilitas</h3>
+
+<select id="air">
+<option>Air Tanah</option>
+<option>PDAM</option>
+<option>Permukaan</option>
+</select>
+
+<select id="bahanBakar">
+<option>Bensin</option>
+<option>Solar</option>
+<option>Pelumas</option>
+<option>Minyak Tanah</option>
+<option>Elpiji</option>
+</select>
+
+<input type="number" id="biayaListrik" placeholder="Biaya Listrik per bulan">
+
+<select id="tipeKwh">
+<option>900</option>
+<option>1300</option>
+<option>2200</option>
+<option>3500</option>
+</select>
+
+<h3>Upload Foto</h3>
+
+<input type="file" id="foto">
+
+<button type="submit">Kirim Laporan</button>
+
+</form>
+
+<div id="status"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
