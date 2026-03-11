@@ -89,6 +89,7 @@ namaPemilik:namaPemilik.value,
 jenisKelamin:jenisKelamin.value,
 pendidikan:pendidikan.value,
 
+tahun:tahun.value,
 periode:periode.value,
 
 nilaiMesin:cleanRupiah(nilaiMesin.value),
