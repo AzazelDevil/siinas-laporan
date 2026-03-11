@@ -1,4 +1,29 @@
-const url="https://script.google.com/macros/s/AKfycbzpqH1cGyyJmCbMMr0kZ0eZDwhtFgrjCd1YxeyOWlV22H_6sGkX302weEMgOKheOi5XBg/exec";
+const url="PASTE_URL_WEBAPP_APPS_SCRIPT";
+
+/* FORMAT RUPIAH OTOMATIS */
+
+document.querySelectorAll(".rupiah").forEach(function(input){
+
+input.addEventListener("input",function(){
+
+let value=this.value.replace(/[^0-9]/g,"");
+
+if(value===""){
+this.value="";
+return;
+}
+
+this.value="Rp " + new Intl.NumberFormat("id-ID").format(value);
+
+});
+
+});
+
+
+function cleanRupiah(value){
+return value.replace(/[^0-9]/g,"");
+}
+
 
 function showToast(message){
 
@@ -14,6 +39,7 @@ toast.classList.remove("show");
 },3000);
 
 }
+
 
 function validateForm(){
 
@@ -36,6 +62,7 @@ return false;
 return true;
 
 }
+
 
 document
 .getElementById("formLaporan")
@@ -64,12 +91,12 @@ pendidikan:pendidikan.value,
 
 periode:periode.value,
 
-nilaiMesin:nilaiMesin.value,
-nilaiLainnya:nilaiLainnya.value,
-modalKerja:modalKerja.value,
+nilaiMesin:cleanRupiah(nilaiMesin.value),
+nilaiLainnya:cleanRupiah(nilaiLainnya.value),
+modalKerja:cleanRupiah(modalKerja.value),
 
-nilaiTanah:nilaiTanah.value,
-nilaiBangunan:nilaiBangunan.value,
+nilaiTanah:cleanRupiah(nilaiTanah.value),
+nilaiBangunan:cleanRupiah(nilaiBangunan.value),
 
 maklonPakai:maklonPakai.value,
 maklonSedia:maklonSedia.value,
@@ -80,12 +107,13 @@ satuan:satuan.value,
 kapasitasUnit:kapasitasUnit.value,
 kapasitasKilo:kapasitasKilo.value,
 
-nilaiProduk:nilaiProduk.value,
+nilaiProduk:cleanRupiah(nilaiProduk.value),
 
 namaBahanBaku:namaBahanBaku.value,
 jumlahBahanBaku:jumlahBahanBaku.value,
 satuanBahanBaku:satuanBahanBaku.value,
-nilaiBahanBaku:nilaiBahanBaku.value,
+
+nilaiBahanBaku:cleanRupiah(nilaiBahanBaku.value),
 
 tenagaKerjaLaki:tenagaKerjaLaki.value,
 tenagaKerjaPerempuan:tenagaKerjaPerempuan.value,
@@ -93,7 +121,8 @@ tenagaKerjaPerempuan:tenagaKerjaPerempuan.value,
 air:air.value,
 bahanBakar:bahanBakar.value,
 
-biayaListrik:biayaListrik.value,
+biayaListrik:cleanRupiah(biayaListrik.value),
+
 tipeKwh:tipeKwh.value,
 
 foto:base64,
