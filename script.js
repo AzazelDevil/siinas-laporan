@@ -1,4 +1,4 @@
-const url="https://script.google.com/macros/s/AKfycbyhqJyV42Br0HjlgXae8o-_c2BazGpq4PSTWcF4U-tSfVxT-1zKeJMq2ZLnnpYE0pQ_Pw/exec";
+const url="https://script.google.com/macros/s/AKfycbyLkQwhywRqsYqTGam4HPcCy7QzA8PU9mo-4frKvMwwptqKCY-A8VJOpFy5T-QqXLrGhg/exec";
 
 /* FORMAT RUPIAH OTOMATIS */
 
