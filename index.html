@@ -73,11 +73,11 @@ Laporan Triwulan SIINas
 <h3>Investasi</h3>
 </div>
 
-<input type="number" id="nilaiMesin" placeholder="Nilai Mesin (dalam rupiah)" required>
-<input type="number" id="nilaiLainnya" placeholder="Nilai Lainnya (dalam rupiah)" required>
-<input type="number" id="modalKerja" placeholder="Modal Kerja (dalam rupiah)" required>
-<input type="number" id="nilaiTanah" placeholder="Nilai Tanah (dalam rupiah)" required>
-<input type="number" id="nilaiBangunan" placeholder="Nilai Bangunan (dalam rupiah)" required>
+<input type="text" id="nilaiMesin" class="rupiah" placeholder="Nilai Mesin" required>
+<input type="text" id="nilaiLainnya" class="rupiah" placeholder="Nilai Lainnya" required>
+<input type="text" id="modalKerja" class="rupiah" placeholder="Modal Kerja" required>
+<input type="text" id="nilaiTanah" class="rupiah" placeholder="Nilai Tanah" required>
+<input type="text" id="nilaiBangunan" class="rupiah" placeholder="Nilai Bangunan" required>
 </div>
 
 <div class="card">
@@ -120,7 +120,7 @@ Laporan Triwulan SIINas
 
 <input type="number" id="kapasitasUnit" placeholder="Kapasitas Unit" required>
 <input type="number" id="kapasitasKilo" placeholder="Kapasitas Kilo" required>
-<input type="number" id="nilaiProduk" placeholder="Nilai Produk Triwulan (dalam rupiah)" required>
+<input type="text" id="nilaiProduk" class="rupiah" placeholder="Nilai Produk Triwulan" required>
 </div>
 
 <div class="card full">
@@ -141,7 +141,7 @@ Laporan Triwulan SIINas
 <option>bungkus</option>
 </select>
 
-<input type="number" id="nilaiBahanBaku" placeholder="Nilai Bahan Baku (dalam rupiah)" required>
+<input type="text" id="nilaiBahanBaku" class="rupiah" placeholder="Nilai Bahan Baku" required>
 </div>
 
 <div class="card">
@@ -176,7 +176,7 @@ Laporan Triwulan SIINas
 <option>Elpiji</option>
 </select>
 
-<input type="number" id="biayaListrik" placeholder="Biaya Listrik (dalam rupiah)" required>
+<input type="text" id="biayaListrik" class="rupiah" placeholder="Biaya Listrik / bulan" required>
 
 <select id="tipeKwh" required>
 <option value="">Tipe Kwh</option>
