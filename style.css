@@ -1,3 +1,7 @@
+*{
+box-sizing:border-box;
+}
+
 body{
 
 margin:0;
@@ -72,20 +76,38 @@ margin-bottom:8px;
 color:#6366f1;
 }
 
-input,select{
+input,
+select{
 
 width:100%;
+
 padding:10px;
 
 border-radius:8px;
+
 border:1px solid #ddd;
 
 margin-bottom:8px;
+
+font-size:14px;
+
+box-sizing:border-box;
 
 }
 
 input:invalid,select:invalid{
 border:2px solid #ef4444;
+}
+
+input:focus,
+select:focus{
+
+outline:none;
+
+border-color:#6366f1;
+
+box-shadow:0 0 0 2px rgba(99,102,241,0.2);
+
 }
 
 .submit-btn{
