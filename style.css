@@ -179,39 +179,37 @@ grid-column:span 1;
 
 .footer-instansi{
 
-margin-top:15px;
-
 display:flex;
 
 align-items:center;
 
 justify-content:center;
 
-gap:8px;
+gap:6px;
 
-padding:8px;
+margin-top:16px;
 
-border-radius:10px;
+font-size:12px;
+
+color:#444;
 
 background:rgba(255,255,255,0.6);
 
-backdrop-filter:blur(6px);
+padding:6px 10px;
 
-width:100%;
+border-radius:10px;
 
-box-sizing:border-box;
+backdrop-filter:blur(4px);
 
 }
 
 .logo-instansi{
 
-width:18px;
+height:1em;
 
-height:18px;
+width:auto;
 
 object-fit:contain;
-
-flex-shrink:0;
 
 }
      
