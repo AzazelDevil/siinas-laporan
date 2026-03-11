@@ -1,4 +1,4 @@
-const url="PASTE_URL_WEBAPP_APPS_SCRIPT";
+const url="https://script.google.com/macros/s/AKfycbyhqJyV42Br0HjlgXae8o-_c2BazGpq4PSTWcF4U-tSfVxT-1zKeJMq2ZLnnpYE0pQ_Pw/exec";
 
 /* FORMAT RUPIAH OTOMATIS */
 
